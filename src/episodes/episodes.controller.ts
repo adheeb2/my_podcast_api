@@ -1,4 +1,17 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 
-@Controller('episodes')
-export class EpisodesController {}
+@Controller('episodes') // Defines the route /users
+export class EpisodesController {
+  @Get()
+  findAll() {
+    return 'all episodes';
+  }
+
+  findFeatured() {
+    return 'featured episode';
+  }
+  @Post()
+  create() {
+    return 'create new episodes';
+  }
+}
